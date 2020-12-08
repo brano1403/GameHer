@@ -34,7 +34,7 @@ class Testing extends TestCase
         $this->assertEquals("Antonio", $user->getLastName());
     }
 
-		public function test_wiring()
+		public function testWiring()
 	{
 		$mock = new MockHandler([
 			new Response(200, ['Test' => 'testik'], 'Len tak '),
@@ -51,7 +51,7 @@ class Testing extends TestCase
 		$this->assertEquals(200, $response->getStatusCode());
 	}
 
-	public function test_Post_methods(){
+	public function testPostMethods(){
 		$post = new \App\Entity\Blog\Post();
 		$comment = new \App\Entity\Blog\Comment();
 		$post -> addComment($comment);
@@ -63,25 +63,25 @@ class Testing extends TestCase
 		$this->assertEquals("Antonio", $post->getTitle());
 	}
 
-	public function test_tag_methods(){
+	public function testTagMethods(){
     	$tag = new \App\Entity\Blog\Tag();
 		$tag -> setName('tag');
 		$this->assertEquals('tag', $tag ->getName());
     }
 
-    public function  test_roles(){
+    public function  testRoles(){
     $user = new App\Entity\User\User();
     $user->setRoles([]);
     $this->assertSame([User::ROLE_DEFAULT], $user->getRoles());
 
 	}
-	public function test_SetAdmin(){
+	public function testSetAdmin(){
     	$user = new App\Entity\User\User();
     	$user->setRoles([User::ROLE_ADMIN]);
     	$this->assertSame([User::ROLE_ADMIN, User::ROLE_DEFAULT] , $user->getRoles());
 	}
 
-	public function test_role_category(){
+	public function testRoleCategory(){
     	$role = new \App\Entity\Team\Role();
 
     	$role->setName('name');
@@ -93,7 +93,7 @@ class Testing extends TestCase
     	$this-> assertSame(User::class, $role->getMembers());
 	}
 
-	public function test_partner_Entity(){
+	public function testPartnerEntity(){
     	$partner = new \App\Entity\Partner();
 
     	$partner->setName('meno');
