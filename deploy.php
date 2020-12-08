@@ -28,7 +28,7 @@ before('deploy:cache:clear', 'deploy:npm:build');
 
 //Setup host
 host('178.40.32.182')
-    ->user('gameher')
+    ->user('brano1403')
     ->multiplexing(false)
     ->forwardAgent(true)
     ->set('deploy_path', '~/{{application}}');
