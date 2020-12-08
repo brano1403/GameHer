@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/symfony4.php';
 
 set('application', 'test');
-set('repository', 'git@github.com:Noelierx/GameHer.git');
+set('repository', 'git@github.com:brano1403/GameHer.git');
 set('allow_anonymous_stats', false);
 set('git_tty', false);
 set('default_timeout', 600);
@@ -27,8 +27,8 @@ before('deploy:cache:clear', 'deploy:npm:install');
 before('deploy:cache:clear', 'deploy:npm:build');
 
 //Setup host
-host('161.35.75.9')
-	->user('gameher')
-	->multiplexing(false)
-	->forwardAgent(true)
-	->set('deploy_path', '~/{{application}}');
+host('178.40.32.182')
+    ->user('gameher')
+    ->multiplexing(false)
+    ->forwardAgent(true)
+    ->set('deploy_path', '~/{{application}}');
