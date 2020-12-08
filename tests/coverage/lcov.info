@@ -1,0 +1,14 @@
+TN:
+SF:C:\xampp\htdocs\GameHer3\GameHer\tests\test.js
+FN:1,isMultipleOf10
+FNF:1
+FNH:1
+FNDA:2,isMultipleOf10
+DA:1,2
+LF:1
+LH:1
+BRDA:1,1,0,1
+BRDA:1,1,1,1
+BRF:2
+BRH:2
+end_of_record
